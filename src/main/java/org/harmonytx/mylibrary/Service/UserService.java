@@ -44,6 +44,10 @@ public class UserService {
         return userRepo.save(user);
     }
 
+    public List<User> getUserByType(String type){
+        return userRepo.findAllByTypeEquals(type);
+    }
+
     public User save(User user){
         return userRepo.save(user);
     }

@@ -12,24 +12,24 @@ public class User {
     @Id
     @GeneratedValue
     private Long id;
+
     @NotNull
-    private int idnumber;
-    @NotNull
+    private String idnumber;
 
     @NotNull
     private String type;
+
     @NotNull
     private String firstname;
+
     @NotNull
     private String lastname;
-    @NotNull
+
     @NotNull
     private String gender;
 
-    @NotNull
     private String grade;
 
-    @NotNull
     private Date joinedDate;
 
     @Email
@@ -41,14 +41,13 @@ public class User {
         super();
     }
 
-    public User(@NotNull int idnumber, @NotNull @NotNull String type, @NotNull String firstname, @NotNull String lastname, @NotNull @NotNull String gender, @NotNull String grade, @NotNull Date joinedDate, @Email @NotNull String email) {
+    public User(String idnumber,  String type, String firstname, String lastname, String gender, String grade,  String email) {
         this.idnumber = idnumber;
         this.type = type;
         this.firstname = firstname;
         this.lastname = lastname;
         this.gender = gender;
         this.grade = grade;
-        this.joinedDate = joinedDate;
         this.email = email;
     }
 
@@ -60,11 +59,11 @@ public class User {
         this.id = id;
     }
 
-    public int getIdnumber() {
+    public String getIdnumber() {
         return idnumber;
     }
 
-    public void setIdnumber(int idnumber) {
+    public void setIdnumber(String idnumber) {
         this.idnumber = idnumber;
     }
 

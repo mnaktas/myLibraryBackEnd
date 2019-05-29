@@ -11,4 +11,5 @@ public interface UserRepo extends JpaRepository<User, Long> {
     public List<User> findAllByOrderByFirstnameAscLastnameAsc();
     public Long countByType(String type);
     public List<User> findAllByOrderByGradeAsc();
+    public List<User> findAllByTypeEquals(String type);
 }
